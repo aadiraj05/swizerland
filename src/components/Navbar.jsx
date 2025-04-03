@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { IoIosSearch } from "react-icons/io"; // Search Icon
-import { TbMapSearch } from "react-icons/tb"; // Map Icon
-import { MdOutlineArrowDropDown } from "react-icons/md"; // Dropdown Icon
-import { FaPlusSquare } from "react-icons/fa"; // Plus Icon
-import { MdHelpCenter } from "react-icons/md";
+import { MdOutlineHome } from "react-icons/md";
+import { FaMapLocationDot } from "react-icons/fa6";
+import { GiFilmSpool } from "react-icons/gi";
+import { TfiGallery } from "react-icons/tfi";
+import { RiContactsBook3Line } from "react-icons/ri";
+import { HiOutlineInformationCircle } from "react-icons/hi2";
+
+
+import Logo1 from "/src/assets/Logo1.png";
+
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
     setTimeout(() => setShowNavbar(true), 2000); // Show navbar after video starts
   }, []);
-  
 
   return (
     <nav
@@ -18,39 +22,33 @@ const Navbar = () => {
         showNavbar ? "opacity-100" : "opacity-0"
       }`}
     >
-      <ul className="flex justify-center space-x-8 py-6 px-6 text-white text-lg bg-transparent transition-colors duration-300 hover:bg-white hover:text-black group">
-        {/* ✅ Switzerland with Icon between 'i' and 'z' (No extra spacing) */}
-        <li className="flex items-center cursor-pointer hover:text-red-600 text-2xl">
-          swi<FaPlusSquare className="text-sm text-red-600 bg-white" />zerland
+      <ul className="flex justify-start gap-15 py-6 px-10 text-white text-lg bg-transparent transition-colors duration-300 hover:bg-white hover:text-black group">
+        
+        {/* Logo */}
+        <li className="flex items-center cursor-pointer hover:text-red-600 text-2xl ml-10">
+          <img src={Logo1} alt="logo" className="h-14 size-30" /> {/* Increased size */}
         </li>
 
-        <li className="cursor-pointer hover:text-red-600 text-xl">Destinations</li>
-        <li className="cursor-pointer hover:text-red-600 text-xl">Experiences</li>
-        <li className="cursor-pointer hover:text-red-600 text-xl">Accommodation</li>
-        <li className="cursor-pointer hover:text-red-600 text-xl">Planning</li>
-
-        {/* ✅ Line Divider (Turns Black When Navbar is Hovered) */}
-        <li className="border-l border-white h-8 transition-colors duration-300 group-hover:border-black"></li>
-
-        {/* Search Icon (Icon on Left) */}
-        <li className="flex items-center gap-2 cursor-pointer hover:text-red-600 text-xl">
-          <IoIosSearch className="text-2xl" /> Search
+        {/* Menu Items with Icons */}
+        <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
+          <MdOutlineHome className="mr-2 text-2xl" /> Home
         </li>
-
-        {/* Language Dropdown (Icon on Right) */}
-        <li className="flex items-center gap-2 cursor-pointer hover:text-red-600 text-xl">
-          Language <MdOutlineArrowDropDown className="text-2xl" />
+        <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
+          <FaMapLocationDot className="mr-2 text-2xl" /> Shooting Location
         </li>
-
-        {/* Maps Icon (Icon on Right) */}
-        <li className="flex items-center gap-2 cursor-pointer hover:text-red-600 text-xl">
-          Map <TbMapSearch className="text-2xl" />
+        <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
+          <GiFilmSpool className="mr-2 text-2xl" /> Film Club
         </li>
-
-        <li className="flex items-center gap-2 cursor-pointer hover:text-red-600 text-xl">
-            Help<MdHelpCenter className="text-xl"/>
+        <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
+          <TfiGallery className="mr-2 text-2xl" /> Gallery
         </li>
-
+        <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
+          <RiContactsBook3Line className="mr-2 text-2xl" /> Contact Us
+        </li>
+        <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
+          <HiOutlineInformationCircle className="mr-2 text-2xl" /> About Us
+        </li>
+        
       </ul>
     </nav>
   );
