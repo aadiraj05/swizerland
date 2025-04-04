@@ -31,22 +31,22 @@ const Navbar = () => {
 
         {/* Menu Items with Icons */}
         <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
-          <MdOutlineHome className="mr-2 text-2xl" /> Home
+           Home
         </li>
         <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
-          <FaMapLocationDot className="mr-2 text-2xl" /> Shooting Location
+           Shooting Location
         </li>
         <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
-          <GiFilmSpool className="mr-2 text-2xl" /> Film Club
+           Film Club
         </li>
         <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
-          <TfiGallery className="mr-2 text-2xl" /> Gallery
+           Gallery
         </li>
         <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
-          <RiContactsBook3Line className="mr-2 text-2xl" /> Contact Us
+          Contact Us
         </li>
         <li className="flex items-center cursor-pointer hover:text-red-600 text-xl font-semibold">
-          <HiOutlineInformationCircle className="mr-2 text-2xl" /> About Us
+           About Us
         </li>
         
       </ul>
