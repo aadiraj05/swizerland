@@ -66,8 +66,8 @@ const FilterableCarousel = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center   bg-gray-600 py-6">
-      <h1 className="text-4xl font-bold mb-4">Top Shooting Locations</h1>
+    <div className="w-full flex flex-col items-center justify-center bg-[#190108] py-6">
+      <h1 className="text-4xl font-bold mb-4 text-white">Top Shooting Locations</h1>
 
       {/* Filter Buttons */}
       <div className="flex space-x-4 mb-6">
@@ -89,19 +89,25 @@ const FilterableCarousel = () => {
         ))}
       </div>
 
+      
+
       {/* Cards Carousel */}
       <div className="overflow-hidden mt-4 w-[70%] relative">
         <div className="flex gap-6 transition-transform duration-500 ease-in-out">
           {cards.slice(index, index + itemsPerPage).map((card) => (
             <div
               key={card.id}
-              className="w-72 h-80 border-2 border-white text-lg font-bold rounded-lg flex flex-col justify-end relative overflow-hidden transition-transform duration-500 hover:scale-105 bg-transparent"
+              className="w-72 h-80 border-2 border-white rounded-2xl overflow-hidden bg-transparent transform transition-transform duration ease-in-out hover:scale-95 group"
             >
               {/* Image */}
-              <img src={card.img} alt={card.title} className="absolute top-0 left-0 w-full h-full object-cover" />
+              <img
+                src={card.img}
+                alt={card.title}
+                className="w-full h-full object-cover transition-transform duration-[2000ms] ease-in-out group-hover:scale-110"
+              />
 
               {/* Location Name */}
-              <div className="absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-3xl bg-opacity-70 text-white text-center py-3">
+              <div className="absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-3xl text-white text-center py-3 z-10">
                 {card.title}
               </div>
             </div>
@@ -110,7 +116,7 @@ const FilterableCarousel = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <div className="flex mt-6 gap-4">
+      <div className="flex  mt-6 gap-4">
         <button onClick={prevSlide} className="p-3 bg-gray-800 text-white rounded-full hover:bg-gray-600">
           <IoIosArrowBack size={30} />
         </button>
@@ -118,7 +124,7 @@ const FilterableCarousel = () => {
           <IoIosArrowForward size={30} />
         </button>
       </div>
-    </div>
+  </div>
   );
 };
 
