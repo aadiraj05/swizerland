@@ -12,6 +12,7 @@ const App = () => {
       <Cards/>
       <Actors/>
       <Footer/>
+      
     </div>
   )
 }
