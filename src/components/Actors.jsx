@@ -57,6 +57,23 @@ const people = [
     occupation: "Actress",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgR6E8BlZvRRo0-szyawR5mStuc5tdhfdFVA&s",
   },
+  {
+    id: 10,
+    name: "Kashish khan",
+    occupation: "Actress",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgR6E8BlZvRRo0-szyawR5mStuc5tdhfdFVA&s",
+  }, {
+    id: 11,
+    name: "Kashish khan",
+    occupation: "Actress",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgR6E8BlZvRRo0-szyawR5mStuc5tdhfdFVA&s",
+  },
+  {
+    id: 12,
+    name: "Kashish khan",
+    occupation: "Actress",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgR6E8BlZvRRo0-szyawR5mStuc5tdhfdFVA&s",
+  },
   
 ];
 
